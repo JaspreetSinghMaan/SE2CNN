@@ -26,4 +26,16 @@ This DEMO was tested on a laptop with:
 
 -The following additional libraries installed for this demo to run: sklearn, scipy, and matplotlib
 
+Basic usage of the se2cnn library
+
+This jupyter demo will contain the basic usage examples of the se2cnn library with applications to digit recognition in the MNIST dataset. The se2cnn library contains 3 main layers (check the useage via help(se2cnn.layers.z2_se2n)):
+
+    z2_se2n: a lifting layer from 2D tensor to SE(2) tensor
+    se2n_se2n: a group convolution layer from SE(2) tensor to SE(2) tensor
+    spatial_max_pool: performs 2x2 spatial max-pooling of the spatial axes
+
+The following functions are used internally, but may be of interest as well:
+
+    rotate_lifting_kernels: rotates the raw 2D lifting kernels (output is a set of rotated kernels)
+    rotate_gconv_kernels: rotates (shift-twists) the se2 kernels (planar rotation + orientation shift
 
